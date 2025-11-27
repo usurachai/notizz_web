@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Notizz - Automated Alerts &amp; Data Intelligence</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link
+            crossorigin=""
+            href="https://fonts.gstatic.com"
+            rel="preconnect"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: {
+                                DEFAULT: "#4338ca", // Indigo 700
+                                light: "#6366f1", // Indigo 500
+                            },
+                            "background-light": "#f9fafb", // Gray 50
+                            "background-dark": "#030712", // Gray 950
+                            "surface-light": "#ffffff",
+                            "surface-dark": "#111827", // Gray 900
+                        },
+                        fontFamily: {
+                            display: ["'Plus Jakarta Sans'", "sans-serif"],
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.75rem", // 12px
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            body {
+                font-family: "Plus Jakarta Sans", sans-serif;
+            }
+            .material-symbols-outlined {
+                font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0,
+                    "opsz" 24;
+            }
+            .gradient-bg {
+                background-image: radial-gradient(
+                        at 27% 37%,
+                        hsla(215, 98%, 61%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 97% 21%,
+                        hsla(125, 98%, 72%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 52% 99%,
+                        hsla(355, 98%, 76%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 10% 29%,
+                        hsla(256, 96%, 68%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 97% 96%,
+                        hsla(38, 60%, 74%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 33% 50%,
+                        hsla(222, 67%, 73%, 0.1) 0px,
+                        transparent 50%
+                    ),
+                    radial-gradient(
+                        at 79% 53%,
+                        hsla(343, 68%, 79%, 0.1) 0px,
+                        transparent 50%
+                    );
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 antialiased font-display"
+    >
+        <div class="min-h-screen flex flex-col relative overflow-hidden">
+            <div class="absolute inset-0 z-0 gradient-bg"></div>
+            <main class="flex-grow flex items-center z-10">
+                <div
+                    class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"
+                >
+                    <div class="max-w-4xl mx-auto">
+                        <h1
+                            class="text-6xl sm:text-7xl md:text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-300 dark:to-white leading-tight tracking-tight"
+                        >
+                            Notizz.online
+                        </h1>
+                        <h2
+                            class="mt-4 text-4xl sm:text-5xl font-bold tracking-tight text-slate-600 dark:text-slate-400"
+                        >
+                            Never Miss Critical Data Again.
+                        </h2>
+                        <p
+                            class="mt-6 text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto"
+                        >
+                            Notizz automates data gathering from any source,
+                            processes it with AI, and delivers timely alerts so
+                            you can make smarter decisions, faster.
+                        </p>
+                    </div>
+                    <div
+                        class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-left"
+                    >
+                        <div
+                            class="bg-surface-light/50 dark:bg-surface-dark/50 p-6 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm"
+                        >
+                            <div
+                                class="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-100 dark:bg-primary-DEFAULT/20 mb-4"
+                            >
+                                <span
+                                    class="material-symbols-outlined text-primary-DEFAULT"
+                                    >notifications_active</span
+                                >
+                            </div>
+                            <h3
+                                class="font-bold text-lg text-slate-900 dark:text-white"
+                            >
+                                Automated Alerts
+                            </h3>
+                            <p
+                                class="mt-2 text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Get instant notifications when important data
+                                changes, right where you need them.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-light/50 dark:bg-surface-dark/50 p-6 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm"
+                        >
+                            <div
+                                class="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-100 dark:bg-primary-DEFAULT/20 mb-4"
+                            >
+                                <span
+                                    class="material-symbols-outlined text-primary-DEFAULT"
+                                    >login</span
+                                >
+                            </div>
+                            <h3
+                                class="font-bold text-lg text-slate-900 dark:text-white"
+                            >
+                                Secure Automation
+                            </h3>
+                            <p
+                                class="mt-2 text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Our bots handle complex browser logins and
+                                navigation to access any data source securely.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-light/50 dark:bg-surface-dark/50 p-6 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm"
+                        >
+                            <div
+                                class="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-100 dark:bg-primary-DEFAULT/20 mb-4"
+                            >
+                                <span
+                                    class="material-symbols-outlined text-primary-DEFAULT"
+                                    >capture</span
+                                >
+                            </div>
+                            <h3
+                                class="font-bold text-lg text-slate-900 dark:text-white"
+                            >
+                                Smart Data Capture
+                            </h3>
+                            <p
+                                class="mt-2 text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                Precisely extract the information you need, from
+                                simple text to complex tables and files.
+                            </p>
+                        </div>
+                        <div
+                            class="bg-surface-light/50 dark:bg-surface-dark/50 p-6 rounded-lg border border-slate-200 dark:border-slate-800 backdrop-blur-sm"
+                        >
+                            <div
+                                class="flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-100 dark:bg-primary-DEFAULT/20 mb-4"
+                            >
+                                <span
+                                    class="material-symbols-outlined text-primary-DEFAULT"
+                                    >hub</span
+                                >
+                            </div>
+                            <h3
+                                class="font-bold text-lg text-slate-900 dark:text-white"
+                            >
+                                AI-Powered Delivery
+                            </h3>
+                            <p
+                                class="mt-2 text-sm text-slate-600 dark:text-slate-400"
+                            >
+                                We use use AI to structure, summarize, and
+                                deliver your data in the most useful format.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
